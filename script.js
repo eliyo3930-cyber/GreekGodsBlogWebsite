@@ -1,4 +1,4 @@
-const GITHUB_REPO = "YOUR_GITHUB_USERNAME/YOUR_REPO_NAME";
+const GITHUB_REPO = "eliyo3930-cyber/GreekGodsBlogWebsite";
 
 function loadUtterances() {
     const container = document.getElementById("utterances-container");
