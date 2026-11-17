@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympus Chronicles | Pantheon Directory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand">OLYMPUS CHRONICLES</a>
+            <nav class="main-nav">
+                <a href="index.html">Chronicles</a>
+                <a href="pantheon.html" class="active">Pantheon Directory</a>
+                <a href="about.html">About & Forum</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <div class="directory-header">
+            <div>
+                <p class="subtitle">LIVE PUBLIC API ARCHIVE</p>
+                <h1>The Greek Pantheon</h1>
+                <p class="section-sub">Scroll through the live registry of Greek deities powered by The Greek Myth API, or filter by name and domain.</p>
+            </div>
+            <div class="search-box">
+                <input type="text" id="godSearch" placeholder="Search deity, symbol, or abode...">
+            </div>
+        </div>
+
+        <div class="pantheon-scroll-wrapper">
+            <div id="godsGrid" class="gods-grid">
+                <p class="loading-text">Summoning records from Mount Olympus...</p>
+            </div>
+        </div>
+
+        <section id="pantheon-comments" class="comment-section">
+            <h2 class="section-heading">Pantheon Notes & Community Discussion</h2>
+            <p class="section-sub">Found a deity in the archive above? Leave a note or discuss their mythos below.</p>
+            <div id="utterances-container"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Olympus Chronicles. Curated by <strong>Jay-m Villanueva</strong> &mdash; 2nd Year ACT.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+:root {
+    --bg-marble: #f9f7f2;
+    --bg-card: #ffffff;
+    --text-ink: #1e1d1a;
+    --text-muted: #5c584f;
+    --accent-gold: #9a7b3e;
+    --accent-olive: #3b4738;
+    --border-stone: #e2ddd2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-marble);
+    color: var(--text-ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, .brand, .subtitle, .tag, .main-nav a, .btn-primary, input {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-stone);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--text-ink);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--accent-gold);
+    border-bottom-color: var(--accent-gold);
+}
+
+.hero {
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-stone);
+    padding: 4.5rem 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--accent-gold);
+    margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.hero-desc {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--accent-olive);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold);
+}
+
+.main-content {
+    flex: 1;
+    padding: 3.5rem 0;
+}
+
+.section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border-stone);
+}
+
+.section-sub {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    margin-bottom: 1.75rem;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.blog-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-stone);
+    border-top: 3px solid var(--accent-gold);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent-gold);
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.blog-card h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+    margin-bottom: 0.85rem;
+}
+
+.blog-card p {
+    color: var(--text-muted);
+    font-size: 0.96rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-stone);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.read-link {
+    color: var(--accent-olive);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-link:hover {
+    color: var(--accent-gold);
+}
+
+.directory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.directory-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.search-box input {
+    padding: 0.7rem 1rem;
+    width: 280px;
+    border: 1px solid var(--border-stone);
+    background-color: var(--bg-card);
+    font-size: 0.92rem;
+    color: var(--text-ink);
+    border-radius: 3px;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.pantheon-scroll-wrapper {
+    max-height: 560px;
+    overflow-y: auto;
+    border: 1px solid var(--border-stone);
+    background-color: #f3efe6;
+    padding: 1.5rem;
+    margin-bottom: 4rem;
+    border-radius: 3px;
+}
+
+.gods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.god-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-stone);
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.god-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-ink);
+    margin-bottom: 0.35rem;
+}
+
+.god-category {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-gold);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.god-desc {
+    font-size: 0.94rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.god-meta {
+    font-size: 0.84rem;
+    color: var(--text-ink);
+    border-top: 1px solid var(--border-stone);
+    padding-top: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.god-meta div {
+    margin-bottom: 0.3rem;
+}
+
+.btn-discuss-god {
+    background: none;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 2px;
+    align-self: flex-start;
+    transition: all 0.2s;
+}
+
+.btn-discuss-god:hover {
+    background-color: var(--accent-gold);
+    color: #ffffff;
+}
+
+.about-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-stone);
+    border-top: 3px solid var(--accent-olive);
+    padding: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.about-card h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.35rem;
+}
+
+.academic-badge {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--accent-olive);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-text {
+    color: var(--text-muted);
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    border-top: 1px solid var(--border-stone);
+    padding-top: 1.5rem;
+}
+
+.meta-item strong {
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-gold);
+    margin-bottom: 0.25rem;
+}
+
+.meta-item span {
+    font-size: 0.95rem;
+    color: var(--text-ink);
+}
+
+.comment-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-stone);
+    padding: 2rem;
+}
+
+.site-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-stone);
+    padding: 1.75rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
